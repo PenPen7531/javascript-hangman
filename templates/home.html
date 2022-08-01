@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <script defer src="../static/js/app.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body id="body">
+    <div class="info">
+        <h1>Hangman</h1>
+        <span id="display" ></span>
+        <svg height="250" width="200" id="container">
+        <!-- Rod -->
+        <line x1="60" y1="20" x2="140" y2="20" stroke="#000000"/>
+        <line x1="140" y1="20" x2="140" y2="50" stroke="#000000"/>
+        <line x1="60" y1="20" x2="60" y2="230" stroke="#000000"/>
+        <line x1="20" y1="230" x2="100" y2="230" stroke="#000000"/>
+
+        <!-- Head -->
+        <circle cx="140" cy="70" r="20" id="head" class="human"/>
+        <!-- Body -->
+        <line x1="140" y1="90" x2="140" y2="150" id="human-body" stroke="#000000" class="human"/>
+        <!-- Arms -->
+        <line x1="140" y1="120" x2="120" y2="100" id="left-arm" stroke="#000000" class="human"/>
+        <line x1="140" y1="120" x2="160" y2="100" id="right-arm" stroke="#000000" class="human"/>
+        <!-- Legs -->
+        <line x1="140" y1="150" x2="120" y2="180" id="left-leg" stroke="#000000" class="human"/>
+        <line x1="140" y1="150" x2="160" y2="180" id="right-leg" stroke="#000000" class="human"/>
+      </svg>
+        
+        <span id="word"></span>
+        <div>Incorrect Guesses: <span id="guesses"></span></div>
+    </div>
+    <div class="buttons">
+        <div class="button" id="a" onclick='guess("a");'>A</div>
+        <div class="button" id="b" onclick='guess("b");'>B</div>
+        <div class="button" id="c" onclick='guess("c");'>C</div>
+        <div class="button" id="d" onclick='guess("d");'>D</div>
+        <div class="button" id="e" onclick='guess("e");'>E</div>
+        <div class="button" id="f" onclick='guess("f");'>F</div>
+        <div class="button" id="g" onclick='guess("g");'>G</div>
+        <div class="button" id="h" onclick='guess("h");'>H</div>
+        <div class="button" id="i" onclick='guess("i");'>I</div>
+        <div class="button" id="j" onclick='guess("j");'>J</div>
+        <div class="button" id="k" onclick='guess("k");'>K</div>
+        <div class="button" id="l" onclick='guess("l");'>L</div>
+        <div class="button" id="m" onclick='guess("m");'>M</div>
+        <div class="button" id="n" onclick='guess("n");'>N</div>
+        <div class="button" id="o" onclick='guess("o");'>O</div>
+        <div class="button" id="p" onclick='guess("p");'>P</div>
+        <div class="button" id="q" onclick='guess("q");'>Q</div>
+        <div class="button" id="r" onclick='guess("r");'>R</div>
+        <div class="button" id="s" onclick='guess("s");'>S</div>
+        <div class="button" id="t" onclick='guess("t");'>T</div>
+        <div class="button" id="u" onclick='guess("u");'>U</div>
+        <div class="button" id="v" onclick='guess("v");'>V</div>
+        <div class="button" id="w" onclick='guess("w");'>W</div>
+        <div class="button" id="x" onclick='guess("x");'>X</div>
+        <div class="button" id="y" onclick='guess("y");'>Y</div>
+        <div class="button" id="z" onclick='guess("z");'>Z</div>
+    </div>
+    <div id="answer" style="display:none">{{ word }}</div>
+</body>
+</html>
