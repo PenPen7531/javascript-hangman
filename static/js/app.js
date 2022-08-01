@@ -48,6 +48,8 @@ function check_answer(){
         word.style.backgroundColor="green";
         body.style.background="linear-gradient(green, white)";
         document.getElementById("display").innerHTML="Winner!!!";
+        document.getElementById("reset").style.display="inline";
+       
     }
 }
 
@@ -82,10 +84,16 @@ function game_over(){
     }
     body.style.backgroundColor="red";
     document.getElementById("display").innerHTML=`Game Over\nCorrect Word: ${answer}`;
+    document.getElementById("reset").style.display="inline";
 
 }
 
+function reset_game(){
+    location.reload();
+};
+
 function guess(letter){
+    console.log("Cicked");
     let new_word="";
     let button=document.getElementById(letter);
     button.style.backgroundColor="red";
@@ -128,6 +136,7 @@ let guesses_div=document.getElementById("guesses");
 guesses_div.innerHTML=guesses;
 answer=get_random_word();
 blank=return_blank(answer);
+const guess_function=document.getElementsByClassName("button")
 
 console.log(answer);
 document.getElementById("word").innerHTML=blank;

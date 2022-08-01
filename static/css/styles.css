@@ -12,6 +12,9 @@ body{
     display:none;
 
 }
+#reset{
+    display:none;
+}
 
 #word{
     border-radius: 100%;

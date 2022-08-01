@@ -12,7 +12,7 @@
 <body id="body">
     <div class="info">
         <h1>Hangman</h1>
-        <span id="display" ></span>
+        <span id="display"></span>
         <svg height="250" width="200" id="container">
         <!-- Rod -->
         <line x1="60" y1="20" x2="140" y2="20" stroke="#000000"/>
@@ -34,6 +34,7 @@
         
         <span id="word"></span>
         <div>Incorrect Guesses: <span id="guesses"></span></div>
+        <span id="reset" onclick="reset_game()">Reset</span>
     </div>
     <div class="buttons">
         <div class="button" id="a" onclick='guess("a");'>A</div>
