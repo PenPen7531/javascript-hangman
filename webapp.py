@@ -1,7 +1,5 @@
-import collections
+
 from flask import Flask, request, jsonify, render_template, redirect, session
-import json
-from random import randint, random
 
 
 
