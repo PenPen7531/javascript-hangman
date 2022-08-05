@@ -4,8 +4,7 @@ body{
     font-size: 3rem;
     background-color: orange;
     color:white;
-    max-width: 100%;
-    width: 100%;
+   
 }
 
 #container > .human{
@@ -17,7 +16,7 @@ body{
 }
 
 #word{
-    border-radius: 100%;
+    border-radius: 25%;
 }
 
 span{
@@ -49,4 +48,8 @@ span{
 
 svg{
     margin-bottom: 0%;
+}
+
+h1{
+    margin: 0%;
 }

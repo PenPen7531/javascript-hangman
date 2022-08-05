@@ -49,6 +49,7 @@ function check_answer(){
         body.style.background="linear-gradient(green, white)";
         document.getElementById("display").innerHTML="Winner!!!";
         document.getElementById("reset").style.display="inline";
+        document.getElementById("guess-display").style.display="none";
        
     }
 }
