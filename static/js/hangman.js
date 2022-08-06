@@ -69,12 +69,12 @@ function display_figure(guesses){
     }
     if (guesses==5){
         document.getElementById("left-leg").style.display="inline";
-    }
+    };
     if (guesses==6){
         document.getElementById("right-leg").style.display="inline";
         game_over();
-    }
-}
+    };
+};
 
 function game_over(){
     let body= document.getElementsByTagName("BODY")[0];
@@ -87,7 +87,7 @@ function game_over(){
     document.getElementById("display").innerHTML=`Game Over\nCorrect Word: ${answer}`;
     document.getElementById("reset").style.display="inline";
 
-}
+};
 
 function reset_game(){
     location.reload();

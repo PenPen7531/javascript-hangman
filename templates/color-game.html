@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Guesser</title>
+    <script defer src="../static/js/color-guess.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/color-styles.css') }}">
+</head>
+<body>
+    <div class="form">
+        <h1>Guess the Color</h1>
+        <h2 id="display"></h2>
+        <form>
+       
+            <input class="input" id="red" type="text" placeholder="RED">
+           
+            <input class="input" id="green" type="text" placeholder="GREEN">
+         
+            <input class="input" id="blue" type="text" placeholder="BLUE">
+            
+        </form>
+        <div id="submit-btn" onclick="submit();">Submit</div>
+        <div id="reset-btn" onclick="reset();">Reset</div>
+        <div id="red-hint"></div>
+        <div id="green-hint"></div>
+        <div id="blue-hint"></div>
+    </div>
+</body>
+</html>

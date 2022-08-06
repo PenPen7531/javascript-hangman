@@ -16,6 +16,10 @@ def hangman():
 @app.route("/tic-tac-toe")
 def tic_tac_toe():
     return render_template("tic-tac-toe.html"), 200
+
+@app.route("/color-guesser")
+def color_guess():
+    return render_template("color-game.html"), 200
     
 if __name__ == "__main__":
     app.run(debug=True)
