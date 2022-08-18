@@ -94,7 +94,7 @@ function reset_game(){
 };
 
 function guess(letter){
-    console.log("Cicked");
+    
     let new_word="";
     let button=document.getElementById(letter);
     button.style.backgroundColor="red";
@@ -141,3 +141,29 @@ const guess_function=document.getElementsByClassName("button")
 
 console.log(answer);
 document.getElementById("word").innerHTML=blank;
+
+let clicked_buttons=[]
+
+document.addEventListener("keydown", (event)=>{
+    let key_char = event.key;
+    let valid=true;
+    console.log(event.keyCode);
+    if (65<=event.keyCode && event.keyCode<=90){
+        for (key in clicked_buttons){
+        
+            if (clicked_buttons[key]==key_char){
+                valid=false;
+            }
+            
+        }
+        if (valid){
+            guess(key_char);
+            clicked_buttons.push(key_char);
+        }
+    }
+  
+    
+
+     
+}
+)
