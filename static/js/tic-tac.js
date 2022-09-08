@@ -221,6 +221,7 @@ function reset(){
     for (let i=0; i<boxes.length; i++){
         boxes[i].innerHTML="";
         boxes[i].style.backgroundColor="grey";
+        boxes[i].style.backgroundColor=null;
     }
     document.getElementById("reset").style.display="none";
     document.getElementById("turn").innerHTML="X"

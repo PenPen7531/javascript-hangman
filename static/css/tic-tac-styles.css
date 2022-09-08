@@ -28,8 +28,10 @@ td {
 .game-board > *{
     margin: 100px;
 }
-td:hover{
+
+.box:hover{
     background-color: darkorange;
+    cursor: pointer;
 }
 
 #reset{

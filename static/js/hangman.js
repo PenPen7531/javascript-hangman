@@ -7,7 +7,9 @@ const words=[
     "html", 
     "css",
     "ruby",
-    "mysql"
+    "mysql",
+    "java", 
+    "sql"
 ]
 
 String.prototype.replaceAt = function(index, replacement) {
@@ -41,13 +43,16 @@ function check_answer(){
     if (word.innerHTML==answer){
         let buttons=document.getElementsByClassName("button");
         for (let i=0; i<buttons.length; i++){
+
             buttons[i].style.backgroundColor="black";
+            
+            
             buttons[i].onclick="null";
         }
         console.log("Winner");
         word.style.backgroundColor="green";
         body.style.background="linear-gradient(green, white)";
-        document.getElementById("display").innerHTML="Winner!!!";
+        document.getElementById("display").innerHTML="Winner";
         document.getElementById("reset").style.display="inline";
         document.getElementById("guess-display").style.display="none";
        
@@ -97,7 +102,7 @@ function guess(letter){
     
     let new_word="";
     let button=document.getElementById(letter);
-    button.style.backgroundColor="red";
+    button.style.backgroundColor="black";
     button.onclick="null";
     let correct=false;
     guessed_letters.push(letter);
