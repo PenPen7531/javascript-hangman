@@ -32,3 +32,24 @@ header{
     justify-content: center;
     align-items: center;
 }
+header > * {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1250px){
+    html{
+        font-size: 0.5rem;
+    }
+    .buttons{
+        margin-top: 25px;
+        flex-direction: column;
+    }
+    .buttons > * {
+        margin: 10px;
+    }
+    header > * {
+        text-align: center;
+    }   
+
+    
+}
