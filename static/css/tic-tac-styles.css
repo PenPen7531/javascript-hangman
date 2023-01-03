@@ -26,7 +26,7 @@ td {
 
 
 .game-board > *{
-    margin: 100px;
+    margin: 25px;
 }
 
 .box:hover{
@@ -65,4 +65,64 @@ h1{
 }
 h2{
     margin: 5px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    background-color: orange;
+    color:white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 20px;
+    border-radius: 25px;
+    border: 3px solid black;
+}
+a:visited{
+    color: white;
+}
+
+.buttons{
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header > * {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px){
+    html{
+        font-size: 0.5rem;
+    }
+   
+    header > * {
+        text-align: center;
+    }   
+
+    td{
+        width: 75px;
+        height: 75px;
+    }
+    .game-board > *{
+        margin: 10px;
+    }
+
+    .game-board{
+        flex-direction: column;
+    }
 }
